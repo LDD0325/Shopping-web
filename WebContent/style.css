@@ -1,0 +1,210 @@
+*{
+font-family: 'Noto Sans KR', sans-serif;
+list-style: none; /*목록에 점 없애주는거*/
+text-decoration: none; /*하이퍼링크에 밑줄,색없애주는거*/
+border-collapse: collapse; /*테이블에 선이다따로떨어져있는걸 없애줌*/
+margin:0px;
+padding:0px;
+color:#000;
+}
+
+h1{
+	font-size:48px;
+	font-weight:100;
+}
+
+.contents1{
+	font-size:20px;
+	font-weight:lighter;
+}
+
+.contents3{
+	font-size:14px;
+	font-weight:100;
+}
+
+.contents1_bold{
+	font-size:18px;
+	font-weight:bold;
+}
+
+/*
+.result{
+	font-size:24px;
+}*/
+
+.intro_bg{ /*배경화면!*/
+	background-image:url("image/star4.jpg");
+	width:100%;
+	height:718px;
+}
+
+.header{ 
+	display:flex; /*이거쓰니까 원래 검색창밑에 네비들이있었는데 검색옆으루 옮겨짐*/
+	width:1280px;
+	margin:auto;
+	height:86px;
+}
+.searchArea{
+	width:300px;
+	height:40px;
+	background:rgba(0,0,0,0.5); /*0.5퍼정도 반투명하단소리?*/
+	border-radius:5px; /*모서리둥글기*/
+	margin-top:24px; /*24정도 내려주기*/
+}
+
+.searchArea > form > input{
+	border:none;
+	width:250px;
+	height:40px;
+	background:rgba(0,0,0,0.0);
+	color:#fff; 
+	padding-left:10px; /*얘넣으니까 안정적으루 됨*/
+}
+
+.searchArea > form > span{ /*검색이라는 글씨*/
+	width:50px;
+	color:#fff; 
+	font-weight:bold;
+	cursor:pointer;
+	
+}
+
+.nav{ /*얘네는 html에있는 nav들*/
+	display:flex; /*이거쓰니까 네비들이 옆으로 쫘라락 감*/
+	justify-content: flex-end; /*글씨들을 끝으로붙야주기*/
+	line-height: 86px; /*글씨들 86px정도밑으로내랴오게함*/
+	width:calc(1280px - 300px);
+}
+
+.nav > li{
+	margin-left:84px; /*네비들 간격*/
+}
+
+.nav > li > a{ /*네비안에 엘아이안에 a*/
+	color:#fff;
+}
+
+
+
+.amount{
+	position:relative;
+	top:-66px;
+	display:flex;
+	width:1280px;
+	background:#fff;
+	box-shadow:0px 5px 10px rgba(0,0,0,0.1); /*우측(마이너스를 넣으면 좌측),하단,흐려지는역할(순서대로)*/
+	margin:auto;
+}
+
+.amount >li {
+	flex:1;
+	height:132px;
+}
+
+.amount > li > div{
+	text-align:center;
+	margin-top:50px;
+	height:57px;
+}
+
+.amount > li:not(:last-child) > div{ /*마지막요소빼고 앞에있는 세개요소에만 보더라이트를 주겠다.라는뜻*/
+	border-right:1px solid #E1E1E1;
+}
+
+
+.intro_text{
+	width:100%;
+	margin:231px auto 231px auto; /*상,우,하,좌 순서로 마진이들어감*/
+	text-align: center;
+}
+
+.intro_text > h1,
+.intro_text > h4{
+	color:#f8efed;
+}
+
+.main_text0{
+	width: 100%;
+	height:601px;
+	margin-top:-132px;
+	background:#f1f2f3;
+}
+
+.main_text0 >h3{
+	padding-top:150px; /*위에서부터 116내린다는뜻*/
+	text-align:center; /*내린후 센터로 옮기기*/
+}
+
+.icons{
+	display:flex; /*분할해준다는뜻?*/
+	width:1280px;
+	height:302px;
+	margin:auto;
+}
+
+.icons>li{
+	flex:1;
+	margin-top:49px; /*위에서부터49내림*/
+	height:302px;
+	text-align:center;
+}
+
+/*.icons>li>.icon_img{
+	margin-top:10px;
+}*/
+
+.icons>li:not(:last-child){ /*마지막요소빼고 빈공간넣기*/
+	margin-right:20px;
+}
+
+footer{
+	display:flex; /*옆으로 나열*/
+	background-image:url("image/star4.jpg");
+	width:96.2%;
+	padding:30px; /*범위가 커진다고해야하나 색을입혀서보면 넓어짐~(박스가 커진다는느낌)*/
+}
+
+
+footer>div:first-child{
+	flex:3; /*3:9비율 무조건 12라구 생각하면댐*/
+	margin-top:10px;
+	text-align:center;
+	color:#f8efed;
+}
+
+footer>div:last-child{
+	flex:9;
+	color:#f8efed;
+}
+
+
+.dropbtn_icon > a{ /*하..드디어됐다...드디어 글씨색 흰색으루바꿨다...마이페이지...*/
+	color:#fff;
+}
+
+
+.dropdown-content{
+  display : none;
+  position : absolute;
+  z-index : 1; /*다른 요소들보다 앞에 배치*/
+  font-weight: 300;
+  background-color: #f9f9f9;
+  min-width : 1px; /*폭인듯*/
+}
+
+.dropdown-content a{
+  display : block;
+  text-decoration : none;
+  color : rgb(37, 37, 37);
+  font-size: 12px;
+  padding : 10px 20px;
+}
+
+.dropdown-content a:hover{
+  background-color : #ececec
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
